@@ -1,0 +1,27 @@
+# Site settings
+title: BroadcastStorm
+email: broadcaststorm@users.noreply.github.com
+description: "A maelstrom of network, systems, and software engineering."
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://broadcaststorm.github.io"
+twitter_username: broadcaststorm
+github_username:  broadcaststorm
+
+# Build settings
+markdown: kramdown
+# theme: minima
+remote-theme: mmistakes/so-simple-theme@3.2.0
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
