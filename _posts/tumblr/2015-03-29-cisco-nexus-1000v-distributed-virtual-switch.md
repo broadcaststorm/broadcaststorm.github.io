@@ -1,0 +1,57 @@
+---
+layout: post
+title: Cisco Nexus 1000V Distributed Virtual Switch
+date: '2015-03-29T14:27:30+00:00'
+tags:
+- nexus
+- n1kv
+- vmware
+- concepts
+tumblr_url: https://broadcaststorm.tumblr.com/post/114953839953/cisco-nexus-1000v-distributed-virtual-switch
+---
+Another Nexus 1000V blog post? &nbsp;Yes. &nbsp;However, the focus of my contribution to the subject is bridging the conceptual divide that exists for traditional network engineers, to provide an intuitive understanding of what is going on, and to help them make sense of a product whose setup is radically different from what they have previous dealt with.
+
+For those that want something more, you can look at the following links:
+
+[**Marketing Overview Video(5 Minutes)**](https://www.youtube.com/watch?v=pgksWMUBmcI)  
+[**Cisco Nexus 1000V “Data Sheet”**](http://www.cisco.com/c/en/us/products/collateral/switches/nexus-1000v-switch-vmware-vsphere/data_sheet_c78-492971.html)  
+[**Cisco Community Support for Nexus 1000V**](https://communities.cisco.com/community/technology/datacenter/data-center-networking/nexus1000v)
+
+**The Familiar**
+
+When logged into the NX1KV, let’s first take a look at the “show modules” output:
+
+    Mod &nbsp;Ports &nbsp;Module-Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status
+    --- &nbsp;----- &nbsp;-------------------------------- &nbsp;------------------ &nbsp;------------
+    1 &nbsp;&nbsp;&nbsp;0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual Supervisor Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nexus1000V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;active \* 2 &nbsp;&nbsp;&nbsp;0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual Supervisor Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nexus1000V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ha-standby 3 &nbsp;&nbsp;&nbsp;1022 &nbsp;&nbsp;Virtual Ethernet Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok 4 &nbsp;&nbsp;&nbsp;1022 &nbsp;&nbsp;Virtual Ethernet Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok 5 &nbsp;&nbsp;&nbsp;1022 &nbsp;&nbsp;Virtual Ethernet Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok 6 &nbsp;&nbsp;&nbsp;1022 &nbsp;&nbsp;Virtual Ethernet Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok Mod &nbsp;Sw &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hw &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --- &nbsp;------------------ &nbsp;------------------------------------------------ &nbsp; 1 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMware ESXi 5.5.0 Releasebuild-2068190 (3.2) &nbsp;&nbsp;&nbsp;&nbsp; 4 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMware ESXi 5.5.0 Releasebuild-2068190 (3.2) &nbsp;&nbsp;&nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMware ESXi 5.5.0 Releasebuild-2068190 (3.2) &nbsp;&nbsp;&nbsp;&nbsp; 6 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMware ESXi 5.5.0 Releasebuild-2068190 (3.2) &nbsp;&nbsp;&nbsp;&nbsp; Mod &nbsp;Server-IP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server-UUID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server-Name --- &nbsp;--------------- &nbsp;------------------------------------ &nbsp;-------------------- 1 &nbsp;&nbsp;&nbsp;10.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA 2 &nbsp;&nbsp;&nbsp;10.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA 3 &nbsp;&nbsp;&nbsp;10.0.0.11 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26594131-5953-0100-0a1a-200000000004 &nbsp;esx-1 4 &nbsp;&nbsp;&nbsp;10.0.0.12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26594131-5953-0100-0a1a-200000000003 &nbsp;esx-2 5 &nbsp;&nbsp;&nbsp;10.0.0.13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26594131-5953-0100-0a1a-200000000040 &nbsp;esx-3 6 &nbsp;&nbsp;&nbsp;10.0.0.14 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26594131-5953-0100-0a1a-20000000003f &nbsp;esx-4 \* this terminal session
+
+The first block of output looks eerily familiar, right? The first two modules resemble supervisor engines. Modules 3-6 look like line cards… with a LOT of ports (over 1000 each). There’s no “model” for the line cards which is a little strange to see.
+
+The second block of output isn’t that strange either, except that the “hardware” section is empty for our supervisor modules and the line cards say “VMware”. The “Sw” column refers to the Nexus 1000V version running on each module. The “Hw” column refers to the software build of the line card in the corresponding module.
+
+The third block is unique to Nexus 1000V as it refers to the management IP addresses for each component and the **server** universally unique identifier (UUID) and hostname. This information tells you on which server or appliance in your network the component resides. This block starts giving you the suggestion that we aren’t dealing with a regular sheet metal chassis.
+
+**The Land of Oz**
+
+What’s the catch? No suprise to many readers: none of those components are physical hardware. It’s either a virtual machine (VSM) or a package/driver (VEM) in VMware. There are no chassis backplanes for the control or data planes. A functioning network must exist between all the components. To explain any more, we need a drawing. The below figure is found on Cisco’s data sheet page. It is their figure, not mine.
+
+<figure data-orig-width="480" data-orig-height="302"><img src="https://64.media.tumblr.com/dd17473de39d459e81c50c46b6d61b0a/tumblr_inline_nlzhp8rirO1re93or_500.jpg" alt="image" data-orig-width="480" data-orig-height="302"></figure>
+
+The VEMs (remember, line cards) are software drivers that reside in each VMware vSphere host (aka the hypervisor). The VEMs forward traffic between the LAN and the VMs on the host. **But** there is very little difference conceptually in how it operates compared to something like a Catalyst 3560-X 48-port switch. &nbsp;In a 3560-X, you have SFP uplinks that connect into the distribution layer configured as VLAN trunks. &nbsp;You have 48 10/100/1000 host ports for clients to connect. &nbsp;The VEMs operate similarly – you have switch “uplinks” (Ethernet ports) but they are the physical VMware server NICs that connect into the physical access layer of your network. &nbsp;You still trunk your VLANs across those uplinks/NICs into your network. &nbsp;The only non-physical element here are your&nbsp;“host ports” (vEthernet ports) – VMware in software connects a VM to a distinct VEM port.
+
+The great part about this technology is that you don’t have to individually manage each and every VEM as a separate switch. &nbsp;This is where the VSM comes in, the supervisor engine of the “distributed virtual switch” (DVS) – the term given to the VSM and all the VEMs associated with it. &nbsp;As in any chassis-based switch, you log into the management interface of the VSM and you see the global switch settings for that (distributed virtual) switch. &nbsp;It is Nexus OS at the core so it’ll behave similarly as a Nexus 5500 or a Nexus 7700 (your usual Cisco model-dependent eccentricities exist, of course). &nbsp;At the CLI, you see all the interfaces in that DVS instance – uplinks for VSM and VEM, client ports that connect to a VM to the network, and which&nbsp;“module” (VMware server) those ports resides on (see the&nbsp;“show modules” output at the beginning of this post).
+
+There are two other components to this unique environment that are different from the physical switch. &nbsp;First, the control plane of this DVS is the physical Ethernet network. &nbsp;Communication between the VSM and VEM use (in the “Layer 2″ style of configuration) two VLANs: &nbsp;control and packet. &nbsp;These can use the same VLAN or distinct VLANs. &nbsp;These VLANs must span across the data center between any VMware host with a VEM and the VSMs (which could be a VM on a VMware host itself). &nbsp;
+
+Second, the VSM has to work very closely with VMware. &nbsp;How else does the DVS know that a VM is connected to a given port? &nbsp;How does VMware know what VLANs (more correctly, port profiles) exist in order to configure a VM? &nbsp;This coordination is established through a “trust relationship” between the VSM and vCenter (the management component of a given VMware environment). &nbsp;These components talk via TCP/IP over port 80 (what your ACLs!) and require a one time setup. &nbsp;Cisco has provided some software ([Virtual Switch Update Manager](http://www.cisco.com/c/en/us/products/collateral/switches/nexus-1000v-switch-vmware-vsphere/datasheet-c78-734070.html)) to help with the VSM installation on VMware and its integration with vCenter to help reduce the barrier to entry.&nbsp;
+
+**The Punch Line**
+
+Okay, you are starting to feel that this isn’t terribly different from normal life. &nbsp;But, there seems to be a lot of complexity. &nbsp;Why go deploy this technology? &nbsp;Well, I’m not going to give you a sales pitch. &nbsp;Just consider this: in a traditional “core, distribution, access network”, imagine having to troubleshoot access problems for desktop workstations from the upstream distribution only rather than the access switch to which it was directly connected. &nbsp;Doesn’t sound fun, does it? &nbsp;Now, imagine having to do QoS. &nbsp;Or, spanning a port to understand a traffic issue?
+
+**Recap**
+
+If you’ve gotten here and are thinking, where’s the technical meat? &nbsp;I don’t see any configuration help or guidance. &nbsp;What gives?
+
+The goal of **this** post is only to help with the concepts and to “de-mystify” the operation of this particular “virtual” switch. &nbsp;I am definitely planning additional posts with some meat. &nbsp;Stay tuned.
+
