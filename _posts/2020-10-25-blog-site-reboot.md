@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  "New location, fresh reboot"
-date:   2020-10-25 15:30: -0500
-categories: blog admin
+date:   2020-10-25 
+tags:
+- blog
+- admin
 ---
 I've decided to relocate my blog content to something a little
 more developer and automation engineer friendly. Tumblr - the
