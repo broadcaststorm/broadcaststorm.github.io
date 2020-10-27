@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using USB Audio Input Channels 3-4 of Mackie ProFXv3 10-channel mixer on Mac Book Pro"
-date:   2020-10-25 15:30: -0500
+date:   2020-10-26
 categories: mackie sound usb macbookpro
 ---
 On the [Mackie ProFXv3 10 channel](https://mackie.com/products/profxv3-professional-effects-mixers-usb)
