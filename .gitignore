@@ -2,5 +2,12 @@ _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+
+# Apple
 .DS_Store
+
+# flexible-jekyll
+yarn.lock
+Gemfile.lock
+package-lock.json
 
