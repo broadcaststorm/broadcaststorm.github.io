@@ -1,7 +1,7 @@
 title: BroadcastStorm
 description: "A maelstrom of network, systems, and software engineering."
 permalink: ':title/'
-baseurl: 
+baseurl: ""
 url: "https://broadcaststorm.github.io"
 site-twitter:
 
@@ -10,10 +10,10 @@ author: Tim Miller
 author-img: tim_miller_social.jpg # add your photo
 about-author: I enjoy learning, doing, and explaining complex topics from physics to Linux to networking to cloud. My path has included journeys as a scientist, systems engineer, and IT architect.
 social-twitter: broadcaststorm
-social-facebook: 
+# social-facebook:
 social-github: broadcaststorm
-social-linkedin: 
-social-email: broadcaststorm@users.noreply.github.com
+social-linkedin: timothyemiller
+# social-email:
 
 # Disqus
 discus-identifier:
