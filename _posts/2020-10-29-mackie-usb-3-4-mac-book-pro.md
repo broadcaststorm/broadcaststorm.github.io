@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Where are Channels 3-4 from Mackie ProFX10v3 mixer on Mac Book Pro???"
+title:  "Mackie ProFX10v3 and USB returns 3-4"
 categories: mackie sound usb macbookpro
 ---
 On the [Mackie ProFXv3 10 channel](https://mackie.com/products/profxv3-professional-effects-mixers-usb)
