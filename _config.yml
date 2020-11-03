@@ -32,4 +32,6 @@ plugins:
 paginate: 8
 paginate_path: "/page/:num"
 
+preview: 40
+
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
