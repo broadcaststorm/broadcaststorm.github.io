@@ -36,7 +36,7 @@ So, upon first deployment, you might have to allocate some time to defining as m
 
 Some highlights - the pre-defined checks that we all want (traffic from client can reach server) to some you necessarily wouldn’t think of (traffic flows on all links in an etherchannel). &nbsp;Those look like this in the web interface:
 
-<figure class="tmblr-full" data-orig-height="862" data-orig-width="2856"><img src="https://64.media.tumblr.com/ec2e90ef64db3c97a4d18ecc7840e92c/tumblr_inline_opsqmhXk9a1re93or_540.png" data-orig-height="862" data-orig-width="2856"></figure>
+<figure class="tmblr-full" data-orig-height="862" data-orig-width="2856"><img src="/images/tumblr/tumblr_inline_opsqmhXk9a1re93or_540.png" data-orig-height="862" data-orig-width="2856"></figure>
 
 Worried that defining all those tasks for your extremely large network could be daunting? &nbsp;Yes, Virginia - there is a Santa Claus and an API for the Forward Platform.
 
@@ -51,7 +51,7 @@ Seriously, you can very quickly determine whether the network has a role in the 
 
 This capture from Brandon Heller’s demonstration ([https://youtu.be/\_\_iaT7WQ41w?t=4m36s](https://youtu.be/__iaT7WQ41w?t=4m36s)) really shows it all. With Google like adaptive search terms, you quickly get the current, live paths involved for the source and destination you are investigating:
 
-<figure class="tmblr-full" data-orig-height="1318" data-orig-width="2876"><img src="https://64.media.tumblr.com/e18bdc181f48a4976c92d311b4266094/tumblr_inline_opsqlteUdn1re93or_540.png" data-orig-height="1318" data-orig-width="2876"></figure>
+<figure class="tmblr-full" data-orig-height="1318" data-orig-width="2876"><img src="/images/tumblr/tumblr_inline_opsqlteUdn1re93or_540.png" data-orig-height="1318" data-orig-width="2876"></figure>
 
 As we discovered during questioning, this newly released product currently understands and models the physical “underlay” transport including VRFs - however, virtualization switches (VMware, e.g) and overlays such as VXLAN are coming soon. &nbsp;So, you might not see the complete “virtual last mile” as I call it but you will definitely get to the physical server hosting the VM in the case of vSwitch.
 

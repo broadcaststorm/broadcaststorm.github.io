@@ -9,7 +9,7 @@ tags:
 - voyance
 tumblr_url: https://broadcaststorm.tumblr.com/post/151523860913/network-analytics-that-helps-you-and-your-help
 ---
-In my [previous post](http://bit.ly/2cv2DEx), I talked about the monitoring tools and visibility that you might typically see at a University. &nbsp;With those tools, you get a great sense of what services/hosts/devices are up/reachable. You even can extract/deduce that some degradation might be going on. &nbsp;I even talked about how the “typical” open source (or inexpensive) tools leave an important aspect of visibility out of the picture.
+In my [previous post](/seeing-the-network-through-your-users-eyes/), I talked about the monitoring tools and visibility that you might typically see at a University. &nbsp;With those tools, you get a great sense of what services/hosts/devices are up/reachable. You even can extract/deduce that some degradation might be going on. &nbsp;I even talked about how the “typical” open source (or inexpensive) tools leave an important aspect of visibility out of the picture.
 
 Visibility is an extremely powerful component of maintaining and supporting your network. &nbsp;The right data in the right hands can lead to quick and effective problem resolution.
 
@@ -55,11 +55,11 @@ When it’s all said and done, the two parts that really got me interested about
 
 So, to see where I’m coming from, take a look at the [Nyansa Voyance Demo video](https://vimeo.com/178696262), starting at the 27:30 mark and watch for 2 minutes. &nbsp;In short - you can search for a particular user, a start and end date and get an overview of what issues that user experienced with possible causes.
 
-<figure data-orig-width="2010" data-orig-height="1194" class="tmblr-full"><img src="https://64.media.tumblr.com/e184f6d3f2f4540d4dc61f8f0a19977c/tumblr_inline_oeqq0aXdgC1re93or_540.png" alt="image" data-orig-width="2010" data-orig-height="1194"></figure>
+<figure data-orig-width="2010" data-orig-height="1194" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_oeqq0aXdgC1re93or_540.png" alt="image" data-orig-width="2010" data-orig-height="1194"></figure>
 
 Just as I said in TL;DR and no I really wasn’t kidding. &nbsp;The analytics engine is making its best inference/deduction based on the data at hand. &nbsp;The best part? &nbsp;You can see the same underlying data for those determinations as well, all in one spot:
 
-<figure data-orig-width="2034" data-orig-height="1270" class="tmblr-full"><img src="https://64.media.tumblr.com/3d83511ce8c510195a85cb3ae4e32500/tumblr_inline_oeqq2tHYyk1re93or_540.png" alt="image" data-orig-width="2034" data-orig-height="1270"></figure>
+<figure data-orig-width="2034" data-orig-height="1270" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_oeqq2tHYyk1re93or_540.png" alt="image" data-orig-width="2034" data-orig-height="1270"></figure>
 
 Generally speaking, there is the potential for real operational savings with this tool enabling first level support to absorb the load from the engineering teams. &nbsp;With some workflows and training, the help desk can field/resolve some of the network tickets coming in. &nbsp;Or, with insight from the Voyance analytics, have a much better chance at assigning the ticket to the correct team for resolution.
 
@@ -69,7 +69,7 @@ The presentations also highlighted a few other features which (for brevity) I wo
 
 1. Dashboard overview of your network - yes, many products have one. &nbsp;But, look at this screenshot. &nbsp;Notice the security “Global Advisories Notifications” (my edit: big red box). &nbsp;This was not covered during the #NFD12 presentation but I think your security team might be interested in the demo. &nbsp;I would have loved to have had the time to see a deeper dive of the security advisories on which it can report.
 
-<figure data-orig-width="2198" data-orig-height="1306" class="tmblr-full"><img src="https://64.media.tumblr.com/bf17bdbaf646834fb1e2de197c05d9f6/tumblr_inline_oeqq6pP0x81re93or_540.png" alt="image" data-orig-width="2198" data-orig-height="1306"></figure>
+<figure data-orig-width="2198" data-orig-height="1306" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_oeqq6pP0x81re93or_540.png" alt="image" data-orig-width="2198" data-orig-height="1306"></figure>
 
 2. Quality of Experience - how “good” was user X’s Skype call? Or, why was it so bad? &nbsp;We didn’t ask but I imagine the same questions can be asked of Avaya or Cisco telephony and/or video conferencing technologies. &nbsp;Maybe even WebEx? (pure conjecture on my part)
 
@@ -97,7 +97,7 @@ Also, after the #NFD12 presentation, I asked about pricing - it’s based on the
 
 ## Disclaimer
 
-I was a Network Field Day delegate - please be sure to review my disclaimer post: [https://broadcaststorm.tumblr.com/2020/10/19/2016-09-11-disclaimer-for-my-blog.html](http://bit.ly/2c7WIJS)
+I was a Network Field Day delegate - please be sure to review my [disclaimer post](/disclaimer-for-my-blog/)
 
 Now, if only I had a network with which to try out this product…
 

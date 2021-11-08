@@ -19,7 +19,7 @@ The blog post series at Cisco ([http://bit.ly/1HwJTD1](http://bit.ly/1HwJTD1)) i
 
 The point of this post - the suggestion was made to “just imagine further right”. &nbsp;I’ve included the figure below from the blog post to aid the hypothesizing:&nbsp;
 
-<figure data-orig-width="550" data-orig-height="306" class="tmblr-full"><img src="https://64.media.tumblr.com/458d22919c462554fad9d7518ee44b41/tumblr_inline_nxschlJ2iM1re93or_540.png" data-orig-width="550" data-orig-height="306"></figure>
+<figure data-orig-width="550" data-orig-height="306" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_nxschlJ2iM1re93or_540.png" data-orig-width="550" data-orig-height="306"></figure>
 
 So, what would that look like? &nbsp;The suggestion from the tweet would lead us to believe the next step is the separation of the CPU and memory. &nbsp;Today, there is a serious challenge to that trend and it’s buried deep inside the Intel processor itself — the memory controller! &nbsp;Intel re-engineered its processor so that it could have better memory performance overall with QPI links even if it was no longer uniformly distributed (NUMA).
 

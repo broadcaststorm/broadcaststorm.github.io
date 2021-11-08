@@ -9,11 +9,11 @@ I had the wonderful opportunity to be a Networking Field Day delegate back in Au
 
 Their instructions on setting up the Docker based agent are really straightforward as most container deployments tend to be. Here’s a partial screen shot of how to get to the downloads:
 
-<figure data-orig-width="2510" data-orig-height="894" class="tmblr-full"><img src="https://64.media.tumblr.com/dbaa7b5756c01ad0d95ee5b5371e9429/tumblr_inline_ogn9ljANqJ1re93or_540.png" alt="image" data-orig-width="2510" data-orig-height="894"></figure><figure data-orig-width="1632" data-orig-height="486" class="tmblr-full"><img src="https://64.media.tumblr.com/d0131cc2c935805ff57c4886637ecb27/tumblr_inline_ogn9lySzBh1re93or_540.png" alt="image" data-orig-width="1632" data-orig-height="486"></figure>
+<figure data-orig-width="2510" data-orig-height="894" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_ogn9ljANqJ1re93or_540.png" alt="image" data-orig-width="2510" data-orig-height="894"></figure><figure data-orig-width="1632" data-orig-height="486" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_ogn9lySzBh1re93or_540.png" alt="image" data-orig-width="1632" data-orig-height="486"></figure>
 
 While I’ve been following Docker a great deal and have used it a little bit in lab environments, I’ve never deployed a container that had persistent storage (volumes) - let alone 3! Not to worry - the ThousandEyes portal provides a nice form to walk you through the process:
 
-<figure data-orig-width="1866" data-orig-height="1298" class="tmblr-full"><img src="https://64.media.tumblr.com/af7de891e042851b214994fa491474b8/tumblr_inline_ogn9mtsQIV1re93or_540.png" alt="image" data-orig-width="1866" data-orig-height="1298"></figure>
+<figure data-orig-width="1866" data-orig-height="1298" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_ogn9mtsQIV1re93or_540.png" alt="image" data-orig-width="1866" data-orig-height="1298"></figure>
 
 Simply plug in the container name, Docker version, and volume parent directory. With that information, they provide the exact Docker commands to pull the image and instantiate the container instance as shown - they embolden the dynamic information you provide so you can also visually see how that information is specified to Docker.
 
@@ -31,7 +31,10 @@ Back to our regularly scheduled program…
 
 All the commands worked just fine - except the enterprise agent did not appear in the portal. &nbsp;Docker reported that the container kept restarting. Running the **docker logs blog-container** showed:
 
-> `*** Running /etc/myinit.d/60-copy-dnsrootkey.sh...cp: cannot stat '/var/lib/te-agent/dns-rootserver.key': Permission denied`
+```bash
+*** Running /etc/myinit.d/60-copy-dnsrootkey.sh...
+cp: cannot stat '/var/lib/te-agent/dns-rootserver.key': Permission denied
+```
 
 **/var/lib/te-agent&nbsp;** is mapped to one of the persistent data volumes for the container. &nbsp;First thought - crap, what did I do wrong:
 
@@ -43,7 +46,9 @@ All the commands worked just fine - except the enterprise agent did not appear i
 
 And this pops out of the noise:
 
-> `Nov 08 09:58:24 minbari.docker.local audit[4310]: AVC avc:  denied  { write } for  pid=4310 comm="cp" name="te-agent" dev="dm-0" ino=9224657 scontext=system_u:system_r:svirt_lxc_net_t:s0:c182,c898 tcontext=system_u:object_r:usr_t:s0 tclass=dir permissive=0`
+```bash
+Nov 08 09:58:24 minbari.docker.local audit[4310]: AVC avc:  denied  { write } for  pid=4310 comm="cp" name="te-agent" dev="dm-0" ino=9224657 scontext=system_u:system_r:svirt_lxc_net_t:s0:c182,c898 tcontext=system_u:object_r:usr_t:s0 tclass=dir permissive=0`
+```
 
 Yes, our old friend SELinux - except, I followed operating system standard procedures to ensure **/var/lib/docker** reset all of its SELinux contexts to the proper values.
 
@@ -61,7 +66,25 @@ Unfortunately, even though we followed the FHS and reset contexts, Red Hat SELin
 
 The solution is to append the ’-v’ volume argument with ’-z’ or ’-Z’.&nbsp;The final ‘docker run’ command (based on the screenshot above) is:
 
-> `docker run \ --hostname='blog-container' \ --memory=2g \ --memory-swap=2g \ --detach=true \ --tty=true \ --shm-size=512M \ -e TEAGENT_ACCOUNT_TOKEN=21zpxbjzsrvknlcgkcoxp4w04ung2261 \ -e TEAGENT_INET=4 \ -v '/var/lib/docker/volumes/thousandeyes/blog-container/te-agent':/var/lib/te-agent:Z \ -v '/var/lib/docker/volumes/thousandeyes/blog-container/te-browserbot':/var/lib/te-browserbot:Z \ -v '/var/lib/docker/volumes/thousandeyes/blog-container/log/':/var/log/agent:Z \ --cap-add=NET_ADMIN \ --cap-add=SYS_ADMIN \ --name 'blog-container' \ --restart=unless-stopped \ thousandeyes/enterprise-agent /sbin/my_init`
+```bash
+docker run \
+  --hostname='blog-container' \
+  --memory=2g \
+  --memory-swap=2g \
+  --detach=true \
+  --tty=true \
+  --shm-size=512M \
+  -e TEAGENT_ACCOUNT_TOKEN=21zpxbjzsrvknlcgkcoxp4w04ung2261 \
+  -e TEAGENT_INET=4 \
+  -v '/var/lib/docker/volumes/thousandeyes/blog-container/te-agent':/var/lib/te-agent:Z \
+  -v '/var/lib/docker/volumes/thousandeyes/blog-container/te-browserbot':/var/lib/te-browserbot:Z \
+  -v '/var/lib/docker/volumes/thousandeyes/blog-container/log/':/var/log/agent:Z \
+  --cap-add=NET_ADMIN \
+  --cap-add=SYS_ADMIN \
+  --name 'blog-container' \
+  --restart=unless-stopped \
+  thousandeyes/enterprise-agent /sbin/my_init
+```
 
 ## Thousand Eyes and Support
 

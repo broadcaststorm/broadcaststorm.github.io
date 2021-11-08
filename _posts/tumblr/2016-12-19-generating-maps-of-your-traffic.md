@@ -42,7 +42,7 @@ NetPath takes the simple traceroute approach with historical context to the next
 
 The only location for that data is your local, on-site instance of SolarWinds. &nbsp;And, visually displayed, the path looks something like this:
 
-<figure class="tmblr-full" data-orig-height="558" data-orig-width="2736"><img src="https://64.media.tumblr.com/79946b04e040d25075904a84df1c5af1/tumblr_inline_oifhu2Kp6m1re93or_540.png" data-orig-height="558" data-orig-width="2736"></figure>
+<figure class="tmblr-full" data-orig-height="558" data-orig-width="2736"><img src="/images/tumblr/tumblr_inline_oifhu2Kp6m1re93or_540.png" data-orig-height="558" data-orig-width="2736"></figure>
 
 SolarWinds doesn’t stop there - path discovery is a neat tool but doesn’t do you much good in a vacuum. &nbsp;The SolarWinds product suite, however, isn’t in a vacuum - between NCM (network configuration manager), NPM (network performance manager), and NTA (network traffic analyzer), SolarWinds has a very rich understanding of your network and can leverage those components to help determine potential root causes for changes in the path behavior. &nbsp;The simplest example of this integration: correlating configuration changes with path behavior changes - namely, a redundant link disappears from your path because you shutdown the interface.
 

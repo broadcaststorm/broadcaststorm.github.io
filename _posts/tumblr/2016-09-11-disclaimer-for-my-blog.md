@@ -46,5 +46,5 @@ Again - as I said before - I write content solely about the technology and trend
 
 In the case of lab scenarios or troubleshooting, I write that content in the hopes it helps my fellow engineers just as I have been helped by other technology blogs.
 
-**Period.**
+**Period**
 

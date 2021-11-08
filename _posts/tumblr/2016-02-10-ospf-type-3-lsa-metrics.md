@@ -24,13 +24,44 @@ If you think the route (and its metric) between ABRs doesn’t matter, please go
 
 This scenario was a perfect opportunity to fire up the network simulation software. &nbsp;The design for this was very simple:
 
-<figure data-orig-width="607" data-orig-height="118" class="tmblr-full"><img src="https://64.media.tumblr.com/faa57ff4b78bddc83a267807eb17868c/tumblr_inline_o2bfaaybOk1re93or_540.png" alt="image" data-orig-width="607" data-orig-height="118"></figure>
+<figure data-orig-width="607" data-orig-height="118" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_o2bfaaybOk1re93or_540.png" alt="image" data-orig-width="607" data-orig-height="118"></figure>
 
 The relevant configs are at the end of the post.&nbsp;
 
 Let’s look at the LSDB and focus on the “summary net” LSAs, specifically LSID 192.168.1.1 (loopback /32 subnet from R2):
 
-    ! Snipped and showing 192.168.1.1 LSA output here Router3#show ip ospf database summary OSPF Router with ID (3.3.3.3) (Process ID 1) Summary Net Link States (Area 0) LS age: 744 Options: (No TOS-capability, DC, Upward) LS Type: Summary Links(Network) Link State ID: 192.168.1.1 (summary Network Number) Advertising Router: 1.1.1.1 LS Seq Number: 80000001 Checksum: 0x13AF Length: 28 Network Mask: /32 MTID: 0 Metric: 11 [...] Summary Net Link States (Area 1) LS age: 743 Options: (No TOS-capability, DC, Upward) LS Type: Summary Links(Network) Link State ID: 192.168.1.1 (summary Network Number) Advertising Router: 3.3.3.3 LS Seq Number: 80000001 Checksum: 0x3B75 Length: 28 Network Mask: /32 MTID: 0 Metric: 21
+```
+! Snipped and showing 192.168.1.1 LSA output here
+Router3#show ip ospf database summary 
+
+            OSPF Router with ID (3.3.3.3) (Process ID 1)
+
+		Summary Net Link States (Area 0)
+
+  LS age: 744
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.1.1 (summary Network Number)
+  Advertising Router: 1.1.1.1
+  LS Seq Number: 80000001
+  Checksum: 0x13AF
+  Length: 28
+  Network Mask: /32
+	MTID: 0 	Metric: 11 
+[...]
+		Summary Net Link States (Area 1)
+
+  LS age: 743
+  Options: (No TOS-capability, DC, Upward)
+  LS Type: Summary Links(Network)
+  Link State ID: 192.168.1.1 (summary Network Number)
+  Advertising Router: 3.3.3.3
+  LS Seq Number: 80000001
+  Checksum: 0x3B75
+  Length: 28
+  Network Mask: /32
+	MTID: 0 	Metric: 21
+```
 
 As you can see in the last lines of each LSA block, the metric in Area 0 is “11” and in Area 1 it’s “21”. Because I set the reference bandwidth value to 10000 (10GE), the 1GE links have an OSPF cost of 10, accounting for the increase in metric between the areas.
 
@@ -52,5 +83,56 @@ Each ABR receives the Type 3 LSA like any other router. &nbsp;When it generates 
 
 ## The Configs
 
-    ! Router R2 interface Loopback0 ip address 192.168.1.1 255.255.255.0 interface GigabitEthernet0/0 ip address 10.10.20.120 255.255.255.0 router ospf 1 router-id 2.2.2.2 auto-cost reference-bandwidth 10000 network 10.10.20.0 0.0.0.255 area 2 network 192.168.1.0 0.0.0.255 area 2 ! Router R1 interface GigabitEthernet0/0 ip address 10.10.20.110 255.255.255.0 interface GigabitEthernet0/1 ip address 10.10.30.110 255.255.255.0 router ospf 1 router-id 1.1.1.1 auto-cost reference-bandwidth 10000 network 10.10.20.0 0.0.0.255 area 2 network 10.10.30.0 0.0.0.255 area 0 ! Router R3 interface GigabitEthernet0/0 ip address 10.10.30.130 255.255.255.0 interface GigabitEthernet0/1 ip address 10.10.10.130 255.255.255.0 router ospf 1 router-id 3.3.3.3 auto-cost reference-bandwidth 10000 network 10.10.10.0 0.0.0.255 area 1 network 10.10.30.0 0.0.0.255 area 0 ! Router R4 interface GigabitEthernet0/0 ip address 10.10.40.140 255.255.255.0 interface GigabitEthernet0/1 ip address 10.10.10.140 255.255.255.0 router ospf 1 router-id 4.4.4.4 auto-cost reference-bandwidth 10000 network 10.10.10.0 0.0.0.255 area 1
+```
+! Router R2
+interface Loopback0
+ ip address 192.168.1.1 255.255.255.0
+
+interface GigabitEthernet0/0
+ ip address 10.10.20.120 255.255.255.0
+
+router ospf 1
+ router-id 2.2.2.2
+ auto-cost reference-bandwidth 10000
+ network 10.10.20.0 0.0.0.255 area 2
+ network 192.168.1.0 0.0.0.255 area 2
+
+! Router R1
+interface GigabitEthernet0/0
+ ip address 10.10.20.110 255.255.255.0
+
+interface GigabitEthernet0/1
+ ip address 10.10.30.110 255.255.255.0
+
+router ospf 1
+ router-id 1.1.1.1
+ auto-cost reference-bandwidth 10000
+ network 10.10.20.0 0.0.0.255 area 2
+ network 10.10.30.0 0.0.0.255 area 0
+
+! Router R3
+interface GigabitEthernet0/0
+ ip address 10.10.30.130 255.255.255.0
+
+interface GigabitEthernet0/1
+ ip address 10.10.10.130 255.255.255.0
+
+router ospf 1
+ router-id 3.3.3.3
+ auto-cost reference-bandwidth 10000
+ network 10.10.10.0 0.0.0.255 area 1
+ network 10.10.30.0 0.0.0.255 area 0
+
+! Router R4
+interface GigabitEthernet0/0
+ ip address 10.10.40.140 255.255.255.0
+
+interface GigabitEthernet0/1
+ ip address 10.10.10.140 255.255.255.0
+
+router ospf 1
+ router-id 4.4.4.4
+ auto-cost reference-bandwidth 10000
+ network 10.10.10.0 0.0.0.255 area 1
+```
 

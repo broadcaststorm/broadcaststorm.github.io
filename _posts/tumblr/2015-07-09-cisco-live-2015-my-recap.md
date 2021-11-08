@@ -11,7 +11,7 @@ Alas, Cisco Live has come and gone, with San Diego off in the distance with much
 
 The technical material and presenters were top notch again this year. &nbsp;The opening (John Chambers) and closing (Mike Rowe) keynotes were simply amazing. &nbsp;I’ve not watched a great deal of Mike Rowe’s shows on cable. &nbsp;I was simply amazed at his story and the passion of his support for the trade skills. He exposed some disconcerting trends in the economy that are quite timely as there is already a great deal of soul searching in academia about the role of a 4-year degree in the economy. &nbsp;I especially loved these posters he presented:
 
-<figure data-orig-width="3264" data-orig-height="2448" class="tmblr-full"><img src="https://64.media.tumblr.com/b9596dac7f002b32562b6db2b3ad2d7c/tumblr_inline_nr8yvdINCV1re93or_540.jpg" alt="image" data-orig-width="3264" data-orig-height="2448"></figure>
+<figure data-orig-width="3264" data-orig-height="2448" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_nr8yvdINCV1re93or_540.jpg" alt="image" data-orig-width="3264" data-orig-height="2448"></figure>
 
 This year, I had a new “first”&nbsp;in a session: a practical exercise in applying the material covered in the session (BRKRST-2667, IPv6 Addressing Plans). With the huge address space available, it’s very easy to feel like the task is daunting. The content of the session was easily digestible and the exercise proved that most of our usual addressing skills and schemes still applied.
 
@@ -31,7 +31,7 @@ This year, I tried to be more involved with the social media activities. I am no
 
 Oh, yeah. &nbsp;Not like many around me remembered, but I certainly didn’t forget the #CAE:
 
-<figure data-orig-width="2448" data-orig-height="3264" class="tmblr-full"><img src="https://64.media.tumblr.com/d4a54dc183aec6d46228d2eade7e9042/tumblr_inline_nr8ywcYVh51re93or_540.jpg" alt="image" data-orig-width="2448" data-orig-height="3264"></figure>
+<figure data-orig-width="2448" data-orig-height="3264" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_nr8ywcYVh51re93or_540.jpg" alt="image" data-orig-width="2448" data-orig-height="3264"></figure>
 
 To wrap this up, I would definitely like to convey that the conference is IMHO one of the premier conference events I’ve attended. Any items above that are less then stellar should not be used as a reason not to go. I wholeheartedly recommend you as a network engineer should attend. Like anything that is beloved and treasured, I’m sure&nbsp;some of my perspective is rooted in the nostalgia of “the good ole days”.
 

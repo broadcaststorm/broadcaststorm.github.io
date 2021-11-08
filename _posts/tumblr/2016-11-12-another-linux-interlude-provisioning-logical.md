@@ -11,7 +11,7 @@ tumblr_url: https://broadcaststorm.tumblr.com/post/153092765628/another-linux-in
 ---
 The context for today’s post involves extending my filesystem layout (partitioning scheme) to accommodate a large Docker repository.
 
-If you’ve read my previous post about my partitioning philosophy here ([https://broadcaststorm.tumblr.com/2020/10/19/2016-11-12-a-brief-linux-interlude-partitions-logical.html](https://broadcaststorm.tumblr.com/2020/10/19/2016-11-12-a-brief-linux-interlude-partitions-logical.html)), you’ll know that I do things a bit different from the default installation layout.
+If you’ve read my previous post about my partitioning philosophy here ([A Brief Linux Interlude - Partitions, Logical Volumes, and Layouts](/a-brief-linux-interlude-partitions-logical/)), you’ll know that I do things a bit different from the default installation layout.
 
 Short version, my Fedora 24 uses the following filesystem layout:
 
@@ -22,7 +22,7 @@ Short version, my Fedora 24 uses the following filesystem layout:
 - tmpLV : /tmp (5GB)  
 - homeLV : /home (20GB)  
 
-Since I’m looking to add space to support Docker images, I need to be worried about the **/var/lib/docker** directory tree. For one container image and instance, 10GB might be fine. &nbsp;As I indicate in [that other blog](https://broadcaststorm.tumblr.com/2020/10/19/2016-11-12-a-brief-linux-interlude-partitions-logical.html) post though, running out of space in /var isn’t good. &nbsp;Let’s go ahead and add a new logical volume (LV) so that we protect the rest of /var and can keep an eye on Docker space consumption. &nbsp;
+Since I’m looking to add space to support Docker images, I need to be worried about the **/var/lib/docker** directory tree. For one container image and instance, 10GB might be fine. &nbsp;As I indicate in [that other blog](a-brief-linux-interlude-partitions-logical/) post though, running out of space in /var isn’t good. &nbsp;Let’s go ahead and add a new logical volume (LV) so that we protect the rest of /var and can keep an eye on Docker space consumption. &nbsp;
 
 **Note** : these instructions assume that you have not installed Docker yet.
 
@@ -63,7 +63,14 @@ I freely admit to not fully grasping the mechanics of Docker where the rubber me
 
 That being said, I can discern the existence of black magic when I see the following:
 
-> `# du -hs /var/lib/docker2.4G	/var/lib/docker# ls -lh /var/lib/docker/devicemapper/devicemappertotal 1.4G-rw-------. 1 root root 100G Nov 12 10:33 data-rw-------. 1 root root 2.0G Nov 12 10:33 metadata`
+```bash
+# du -hs /var/lib/docker
+2.4G /var/lib/docker
+# ls -lh /var/lib/docker/devicemapper/devicemapper
+total 1.4G
+-rw-------. 1 root root 100G Nov 12 10:33 data
+-rw-------. 1 root root 2.0G Nov 12 10:33 metadata
+```
 
 For those with poor eyesight, a 2.4G directory tree has a 100GB file in it. &nbsp;Why that is I will one day investigate… but not today.
 

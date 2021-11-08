@@ -29,7 +29,62 @@ This next item is not a gotcha per se, but something I learned about the CLI in 
 
 ## The Minimal ASA configuration
 
-    ! Create required security association (SA) for L2TP over IPsec on ChromeBooks crypto ipsec ikev1 transform-set ESP-3DES-SHA-TRANS esp-3des esp-sha-hmac crypto ipsec ikev1 transform-set ESP-3DES-SHA-TRANS mode transport ! Add transform set to dynamic map crypto dynamic-map SYSTEM\_DEFAULT\_CRYPTO\_MAP 65535 set ikev1 transform-set ESP-3DES-SHA-TRANS crypto map vpn\_map 65535 ipsec-isakmp dynamic SYSTEM\_DEFAULT\_CRYPTO\_MAP ! Apply crypto maps to vpn-outside interface crypto map vpn\_map interface vpn-outside crypto ikev1 enable vpn-outside ! Note: Priority 120 is the default on ASA5505. You can re-order the policies so that it is 10. crypto ikev1 policy 120 authentication pre-share encryption 3des hash sha group 2 lifetime 86400 ! Set up L2TP over IPsec group policy for DefaultRAGroup (use your DNS info) group-policy DefaultRAGroupPolicy internal group-policy DefaultRAGroupPolicy attributes vpn-tunnel-protocol l2tp-ipsec dns-server value W.X.Y.Z default-domain value example.com ! vpn-simultaneous-logins 25 ! Dynamic IP address pool for VPN profiles ip local pool ChromeBook 192.168.1.1-192.168.1.49 mask 255.255.255.0 ! Associate address pool and group policy to tunnel-group tunnel-group DefaultRAGroup general-attributes address-pool ChromeBook default-group-policy DefaultRAGroupPolicy ! This example relies on local account. Set up below for other AAA options ! authentication-server-group YOUR\_AAA\_AUTHN\_SERVER ! accounting-server-group YOUR\_AAA\_ACCT\_SERVER ! Add Pre-shared Key to tunnel-group tunnel-group DefaultRAGroup ipsec-attributes ikev1 pre-shared-key CHANGE\_THIS\_PSK\_FOR\_YOUR\_VPN ! Disable PAP, enable MS-CHAPv2 on tunnel-group tunnel-group DefaultRAGroup ppp-attributes no authentication pap authentication ms-chap-v2 ! Lower the TCPMSS so that the (potentially incorrect) ChromeBook MTU calculation doesn't affect traffic flow sysopt connection tcpmss 1300
+```
+!  Create required security association (SA) for L2TP over IPsec on ChromeBooks
+crypto ipsec ikev1 transform-set ESP-3DES-SHA-TRANS esp-3des esp-sha-hmac 
+crypto ipsec ikev1 transform-set ESP-3DES-SHA-TRANS mode transport
+
+
+!  Add transform set to dynamic map
+crypto dynamic-map SYSTEM_DEFAULT_CRYPTO_MAP 65535 set ikev1 transform-set ESP-3DES-SHA-TRANS 
+crypto map vpn_map 65535 ipsec-isakmp dynamic SYSTEM_DEFAULT_CRYPTO_MAP
+
+
+!  Apply crypto maps to vpn-outside interface
+crypto map vpn_map interface vpn-outside
+crypto ikev1 enable vpn-outside
+
+
+!  Note:  Priority 120 is the default on ASA5505.  You can re-order the policies so that it is 10.  
+crypto ikev1 policy 120
+ authentication pre-share
+ encryption 3des
+ hash sha
+ group 2
+ lifetime 86400
+
+!  Set up L2TP over IPsec group policy for DefaultRAGroup (use your DNS info)
+group-policy DefaultRAGroupPolicy internal
+group-policy DefaultRAGroupPolicy attributes
+ vpn-tunnel-protocol l2tp-ipsec 
+ dns-server value W.X.Y.Z
+ default-domain value example.com
+ ! vpn-simultaneous-logins 25
+
+!  Dynamic IP address pool for VPN profiles
+ip local pool ChromeBook 192.168.1.1-192.168.1.49 mask 255.255.255.0
+
+!  Associate address pool and group policy to tunnel-group
+tunnel-group DefaultRAGroup general-attributes
+ address-pool ChromeBook
+ default-group-policy DefaultRAGroupPolicy
+ ! This example relies on local account.  Set up below for other AAA options
+ ! authentication-server-group YOUR_AAA_AUTHN_SERVER
+ ! accounting-server-group YOUR_AAA_ACCT_SERVER
+
+!  Add Pre-shared Key to tunnel-group
+tunnel-group DefaultRAGroup ipsec-attributes
+ ikev1 pre-shared-key CHANGE_THIS_PSK_FOR_YOUR_VPN
+
+
+!  Disable PAP, enable MS-CHAPv2 on tunnel-group
+tunnel-group DefaultRAGroup ppp-attributes
+ no authentication pap
+ authentication ms-chap-v2
+
+!  Lower the TCPMSS so that the (potentially incorrect) ChromeBook MTU calculation doesn't affect traffic flow 
+sysopt connection tcpmss 1300
+```
 
 Unlike the documentation links provided above, my example chooses to define an explicit **group-policy** for the DefaultRAGroup rather than rely on DfltGrpPolicy **&nbsp;** that is assumed by DefaultRAGroup (by default, of course). &nbsp;As a matter of principle, we try to keep the various default groups that all policies and tunnel groups fall back to clean. &nbsp;With the group policy, that was possible. We really did not like having to rely on DefaultRAGroup **tunnel-group** &nbsp;but also did not have the infrastructure for managing user certificates at this time.
 

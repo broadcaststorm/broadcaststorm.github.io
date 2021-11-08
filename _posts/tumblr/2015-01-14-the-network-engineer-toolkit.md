@@ -17,7 +17,7 @@ By the end of my first year as a network engineer, my backpack had a random asso
 
 The absolute must have items, of course, are the console cables — both the traditional RJ45-to-DB9 and the newer USB-to-mini-USB — and a USB-to-DB9 serial adapter for your laptop. No console means no soup for you. (The console cables are Cisco provided and the serial adapter is TrippLite)
 
-<figure class="tmblr-full" data-orig-height="240" data-orig-width="320" data-orig-src="https://64.media.tumblr.com/29457e21c743cf89d7048867ab7d0ee2/tumblr_inline_ni746oguI01re93or.jpg"><img src="https://64.media.tumblr.com/29457e21c743cf89d7048867ab7d0ee2/tumblr_inline_pc30h5pfNt1re93or_540.jpg" data-orig-height="240" data-orig-width="320" data-orig-src="https://64.media.tumblr.com/29457e21c743cf89d7048867ab7d0ee2/tumblr_inline_ni746oguI01re93or.jpg"></figure>
+<figure class="tmblr-full" data-orig-height="240" data-orig-width="320" data-orig-src="/images/tumblr/tumblr_inline_ni746oguI01re93or.jpg"><img src="/images/tumblr/tumblr_inline_pc30h5pfNt1re93or_540.jpg" data-orig-height="240" data-orig-width="320" data-orig-src="/images/tumblr/tumblr_inline_ni746oguI01re93or.jpg"></figure>
 
 Also a must have: network patch cables (one for your laptop and one for use in the field when you find a bad one). Although rarely needed any more, I also pack a true crossover cable. For those cases where your cable needs just a bit more length, a coupler comes in handy too. And, since most of our distribution switches are fiber only, I carry a GLC-T module to plug into them.
 
@@ -27,13 +27,13 @@ For maximum benefit on those items, having an (encrypted) external hard drive or
 
 Finally, we reach the items that arose from the realization that “it sure would be handy if we had…”: a C14-to-NEMA 5-15R dongle (laptop power from data center PDU), spare iPhone/iPad wall charger, a USB to 30-pin/Lightning/microUSB 3-in-1 octopus connecter (to charge any Apple or Android phone), a lithium battery for charging iPhones (in case there’s no available power outlets where you’re at), and a light source (USB powered LED light with bendable, shape-holding, metal rod).
 
-<figure data-orig-height="320" data-orig-width="240" data-orig-src="https://64.media.tumblr.com/7ad6d7b8643068ff06f5daf49646b11e/tumblr_inline_ni74boVMlM1re93or.jpg"><img src="https://64.media.tumblr.com/7ad6d7b8643068ff06f5daf49646b11e/tumblr_inline_pc30h5G6km1re93or_540.jpg" data-orig-height="320" data-orig-width="240" data-orig-src="https://64.media.tumblr.com/7ad6d7b8643068ff06f5daf49646b11e/tumblr_inline_ni74boVMlM1re93or.jpg"></figure>
+<figure data-orig-height="320" data-orig-width="240" data-orig-src="/images/tumblr/tumblr_inline_ni74boVMlM1re93or.jpg"><img src="/images/tumblr/tumblr_inline_pc30h5G6km1re93or_540.jpg" data-orig-height="320" data-orig-width="240" data-orig-src="/images/tumblr/tumblr_inline_ni74boVMlM1re93or.jpg"></figure>
 
 Because I had room, I also pack a console cable for our blade switch modules, a console cable for the data center PDUs, and an extra USB-to-microUSB long length cable.
 
 And, regardless of my role, I never leave home (unless flying) without a Leatherman, a Bluetooth headset, and a multi-bit screwdriver.
 
-<figure data-orig-height="320" data-orig-width="240" data-orig-src="https://64.media.tumblr.com/69784fdd81e2b6f382b32b9005f6996f/tumblr_inline_ni74n8fEng1re93or.jpg"><img src="https://64.media.tumblr.com/69784fdd81e2b6f382b32b9005f6996f/tumblr_inline_pc30h5Od0F1re93or_540.jpg" data-orig-height="320" data-orig-width="240" data-orig-src="https://64.media.tumblr.com/69784fdd81e2b6f382b32b9005f6996f/tumblr_inline_ni74n8fEng1re93or.jpg"></figure>
+<figure data-orig-height="320" data-orig-width="240" data-orig-src="/images/tumblr/tumblr_inline_ni74n8fEng1re93or.jpg"><img src="/images/tumblr/tumblr_inline_pc30h5Od0F1re93or_540.jpg" data-orig-height="320" data-orig-width="240" data-orig-src="/images/tumblr/tumblr_inline_ni74n8fEng1re93or.jpg"></figure>
 
 One thing to keep in mind when building your kit is to remember that your team is out in the field with you as well. Some of these items are multi-purpose just in case someone needs to borrow it.
 
@@ -41,11 +41,11 @@ So, how does that all pack up? &nbsp;Well, that’s where some extra packaging f
 
 The inner box of gear that is rarely used:
 
-<figure class="tmblr-full" data-orig-height="240" data-orig-width="320" data-orig-src="https://64.media.tumblr.com/006db6fc90933598a8a40ffffd3656af/tumblr_inline_ni74p4TV031re93or.jpg"><img src="https://64.media.tumblr.com/006db6fc90933598a8a40ffffd3656af/tumblr_inline_pc30h6Q3hM1re93or_540.jpg" data-orig-height="240" data-orig-width="320" data-orig-src="https://64.media.tumblr.com/006db6fc90933598a8a40ffffd3656af/tumblr_inline_ni74p4TV031re93or.jpg"></figure>
+<figure class="tmblr-full" data-orig-height="240" data-orig-width="320" data-orig-src="/images/tumblr/tumblr_inline_ni74p4TV031re93or.jpg"><img src="/images/tumblr/tumblr_inline_pc30h6Q3hM1re93or_540.jpg" data-orig-height="240" data-orig-width="320" data-orig-src="/images/tumblr/tumblr_inline_ni74p4TV031re93or.jpg"></figure>
 
 The outer box of gear that is frequently used (console cables):
 
-<figure class="tmblr-full" data-orig-height="240" data-orig-width="320" data-orig-src="https://64.media.tumblr.com/06e50ef1584bdc5e0198e0d38de0f34c/tumblr_inline_ni74ph3RQk1re93or.jpg"><img src="https://64.media.tumblr.com/06e50ef1584bdc5e0198e0d38de0f34c/tumblr_inline_pc30h685Hf1re93or_540.jpg" data-orig-height="240" data-orig-width="320" data-orig-src="https://64.media.tumblr.com/06e50ef1584bdc5e0198e0d38de0f34c/tumblr_inline_ni74ph3RQk1re93or.jpg"></figure>
+<figure class="tmblr-full" data-orig-height="240" data-orig-width="320" data-orig-src="/images/tumblr/tumblr_inline_ni74ph3RQk1re93or.jpg"><img src="/images/tumblr/tumblr_inline_pc30h685Hf1re93or_540.jpg" data-orig-height="240" data-orig-width="320" data-orig-src="/images/tumblr/tumblr_inline_ni74ph3RQk1re93or.jpg"></figure>
 
 The box height is about 8in x 10in x 2in (HxWxD) and fits very nicely into the middle compartment of a backpack. &nbsp;
 

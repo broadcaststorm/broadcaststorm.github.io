@@ -57,15 +57,15 @@ The DriveScale approach starts with standard off-the-shelf JBOD storage shelves 
 
 Here’s what a typical rack looks like physically:
 
-<figure class="tmblr-full" data-orig-height="1628" data-orig-width="2880"><img src="https://64.media.tumblr.com/c66a2d7b29e70fddb6dcf1989db06228/tumblr_inline_ohmosetVFG1re93or_540.png" data-orig-height="1628" data-orig-width="2880"></figure>
+<figure class="tmblr-full" data-orig-height="1628" data-orig-width="2880"><img src="/images/tumblr/tumblr_inline_ohmosetVFG1re93or_540.png" data-orig-height="1628" data-orig-width="2880"></figure>
 
 Logically, this is how it connects together within the rack:
 
-<figure class="tmblr-full" data-orig-height="1620" data-orig-width="2880"><img src="https://64.media.tumblr.com/8dbdb5faf8edd99f66c371bee881370b/tumblr_inline_ohmost81vk1re93or_540.png" data-orig-height="1620" data-orig-width="2880"></figure>
+<figure class="tmblr-full" data-orig-height="1620" data-orig-width="2880"><img src="/images/tumblr/tumblr_inline_ohmost81vk1re93or_540.png" data-orig-height="1620" data-orig-width="2880"></figure>
 
 Drilling down into the magic hardware sauce, namely the DriveScale appliance and controllers - the 1RU appliance has four DriveScale controllers in it. &nbsp;Each controller has dual 20GE uplinks to your servers. &nbsp;A pair of those controllers attach to a single dual controller (SAS 12Gbps based) JBOD array. &nbsp;Here’s the logical drawing for that appliance:
 
-<figure class="tmblr-full" data-orig-height="1624" data-orig-width="2880"><img src="https://64.media.tumblr.com/90762e9fdc1125e83948408d3b530317/tumblr_inline_ohmotnEVeR1re93or_540.png" data-orig-height="1624" data-orig-width="2880"></figure>
+<figure class="tmblr-full" data-orig-height="1624" data-orig-width="2880"><img src="/images/tumblr/tumblr_inline_ohmotnEVeR1re93or_540.png" data-orig-height="1624" data-orig-width="2880"></figure>
 
 Note: the NVMe SSDs on the front are not quite available yet (Nov 2016).
 

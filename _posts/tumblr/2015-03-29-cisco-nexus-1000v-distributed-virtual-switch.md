@@ -21,9 +21,36 @@ For those that want something more, you can look at the following links:
 
 When logged into the NX1KV, let’s first take a look at the “show modules” output:
 
-    Mod &nbsp;Ports &nbsp;Module-Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Model &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status
-    --- &nbsp;----- &nbsp;-------------------------------- &nbsp;------------------ &nbsp;------------
-    1 &nbsp;&nbsp;&nbsp;0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual Supervisor Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nexus1000V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;active \* 2 &nbsp;&nbsp;&nbsp;0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Virtual Supervisor Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nexus1000V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ha-standby 3 &nbsp;&nbsp;&nbsp;1022 &nbsp;&nbsp;Virtual Ethernet Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok 4 &nbsp;&nbsp;&nbsp;1022 &nbsp;&nbsp;Virtual Ethernet Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok 5 &nbsp;&nbsp;&nbsp;1022 &nbsp;&nbsp;Virtual Ethernet Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok 6 &nbsp;&nbsp;&nbsp;1022 &nbsp;&nbsp;Virtual Ethernet Module &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok Mod &nbsp;Sw &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hw &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --- &nbsp;------------------ &nbsp;------------------------------------------------ &nbsp; 1 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMware ESXi 5.5.0 Releasebuild-2068190 (3.2) &nbsp;&nbsp;&nbsp;&nbsp; 4 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMware ESXi 5.5.0 Releasebuild-2068190 (3.2) &nbsp;&nbsp;&nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMware ESXi 5.5.0 Releasebuild-2068190 (3.2) &nbsp;&nbsp;&nbsp;&nbsp; 6 &nbsp;&nbsp;&nbsp;5.2(1)SV3(1.2) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VMware ESXi 5.5.0 Releasebuild-2068190 (3.2) &nbsp;&nbsp;&nbsp;&nbsp; Mod &nbsp;Server-IP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server-UUID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Server-Name --- &nbsp;--------------- &nbsp;------------------------------------ &nbsp;-------------------- 1 &nbsp;&nbsp;&nbsp;10.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA 2 &nbsp;&nbsp;&nbsp;10.0.0.1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NA 3 &nbsp;&nbsp;&nbsp;10.0.0.11 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26594131-5953-0100-0a1a-200000000004 &nbsp;esx-1 4 &nbsp;&nbsp;&nbsp;10.0.0.12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26594131-5953-0100-0a1a-200000000003 &nbsp;esx-2 5 &nbsp;&nbsp;&nbsp;10.0.0.13 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26594131-5953-0100-0a1a-200000000040 &nbsp;esx-3 6 &nbsp;&nbsp;&nbsp;10.0.0.14 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26594131-5953-0100-0a1a-20000000003f &nbsp;esx-4 \* this terminal session
+```
+Mod  Ports  Module-Type                       Model               Status
+---  -----  --------------------------------  ------------------  ------------
+1    0      Virtual Supervisor Module         Nexus1000V          active *
+2    0      Virtual Supervisor Module         Nexus1000V          ha-standby
+3    1022   Virtual Ethernet Module           NA                  ok
+4    1022   Virtual Ethernet Module           NA                  ok
+5    1022   Virtual Ethernet Module           NA                  ok
+6    1022   Virtual Ethernet Module           NA                  ok
+
+Mod  Sw                  Hw      
+---  ------------------  ------------------------------------------------  
+1    5.2(1)SV3(1.2)      0.0                                              
+2    5.2(1)SV3(1.2)      0.0                                              
+3    5.2(1)SV3(1.2)      VMware ESXi 5.5.0 Releasebuild-2068190 (3.2)     
+4    5.2(1)SV3(1.2)      VMware ESXi 5.5.0 Releasebuild-2068190 (3.2)     
+5    5.2(1)SV3(1.2)      VMware ESXi 5.5.0 Releasebuild-2068190 (3.2)     
+6    5.2(1)SV3(1.2)      VMware ESXi 5.5.0 Releasebuild-2068190 (3.2)     
+
+Mod  Server-IP        Server-UUID                           Server-Name
+---  ---------------  ------------------------------------  --------------------
+1    10.0.0.1         NA                                    NA
+2    10.0.0.1         NA                                    NA
+3    10.0.0.11        26594131-5953-0100-0a1a-200000000004  esx-1
+4    10.0.0.12        26594131-5953-0100-0a1a-200000000003  esx-2
+5    10.0.0.13        26594131-5953-0100-0a1a-200000000040  esx-3
+6    10.0.0.14        26594131-5953-0100-0a1a-20000000003f  esx-4
+
+* this terminal session
+```
 
 The first block of output looks eerily familiar, right? The first two modules resemble supervisor engines. Modules 3-6 look like line cards… with a LOT of ports (over 1000 each). There’s no “model” for the line cards which is a little strange to see.
 
@@ -35,7 +62,7 @@ The third block is unique to Nexus 1000V as it refers to the management IP addre
 
 What’s the catch? No suprise to many readers: none of those components are physical hardware. It’s either a virtual machine (VSM) or a package/driver (VEM) in VMware. There are no chassis backplanes for the control or data planes. A functioning network must exist between all the components. To explain any more, we need a drawing. The below figure is found on Cisco’s data sheet page. It is their figure, not mine.
 
-<figure data-orig-width="480" data-orig-height="302"><img src="https://64.media.tumblr.com/dd17473de39d459e81c50c46b6d61b0a/tumblr_inline_nlzhp8rirO1re93or_500.jpg" alt="image" data-orig-width="480" data-orig-height="302"></figure>
+<figure data-orig-width="480" data-orig-height="302"><img src="/images/tumblr/tumblr_inline_nlzhp8rirO1re93or_500.jpg" alt="image" data-orig-width="480" data-orig-height="302"></figure>
 
 The VEMs (remember, line cards) are software drivers that reside in each VMware vSphere host (aka the hypervisor). The VEMs forward traffic between the LAN and the VMs on the host. **But** there is very little difference conceptually in how it operates compared to something like a Catalyst 3560-X 48-port switch. &nbsp;In a 3560-X, you have SFP uplinks that connect into the distribution layer configured as VLAN trunks. &nbsp;You have 48 10/100/1000 host ports for clients to connect. &nbsp;The VEMs operate similarly – you have switch “uplinks” (Ethernet ports) but they are the physical VMware server NICs that connect into the physical access layer of your network. &nbsp;You still trunk your VLANs across those uplinks/NICs into your network. &nbsp;The only non-physical element here are your&nbsp;“host ports” (vEthernet ports) – VMware in software connects a VM to a distinct VEM port.
 

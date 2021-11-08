@@ -7,7 +7,9 @@ tumblr_url: https://broadcaststorm.tumblr.com/post/132894430653/fedora-23-adding
 ---
 I had the occasion to start trying out Fedora 23 and wanted to register my own Certificate Authority certificate system-wide. &nbsp;The root cause - my YUM repository was SSL-protected with a untrusted CA certificate. &nbsp;The&nbsp; **dnf** &nbsp;command produced the following error message (excerpted):
 
-> _Curl error (60): Peer certificate cannot be authenticated with given CA certificates for URL [Peer’s Certificate issuer is not recognized.]_
+```
+_Curl error (60): Peer certificate cannot be authenticated with given CA certificates for URL [Peer’s Certificate issuer is not recognized.]
+```
 
 The answer is clear - I need to get Fedora 23 to recognize and trust my local CA certificate. &nbsp;
 
@@ -24,13 +26,15 @@ For many releases now, the **/etc/pki** &nbsp;directory has housed most things x
 
 First, you’ll need your CA’s public certificate exported in the PEM format. &nbsp;Without seeming too basic, I will point out that the filename should be fairly descriptive about the contents. &nbsp;For example:
 
-> **CA.Public–DOMAIN–Exp2016.pem**
+**CA.Public–DOMAIN–Exp2016.pem**
 
 There is little doubt what should be contained in that file. &nbsp;Having dealt with certificates for quite some time, even though the openssl suite can reveal all, this simply scheme saves a lot of time. &nbsp;Every now and then, you should use those tools just to make sure a junior admin ran the correct commands to generate that file though!
 
 Second, place your local CA’s public certificate in the following location:
 
-> **/etc/pki/ca-trust/source/anchors**
+```
+/etc/pki/ca-trust/source/anchors
+```
 
 Here’s the important part for NSS based systems (Firefox) - **make sure the file is world readable.** &nbsp; The _p11-kit-trust.so_&nbsp;replacement for _libnssckbi.so_&nbsp;would lead one to believe that the rebuilt CA files (next step) are all that is needed. &nbsp;After an hour of troubleshooting, it became clear that Firefox had to open them directly.
 
@@ -61,7 +65,9 @@ The p11-kit system is designed to provide a simple Fedora management interface t
 
 The system also comes with the following nifty command:
 
-> **/usr/bin/trust [list|extract|extract-compat|anchor]**
+```bash
+/usr/bin/trust [list|extract|extract-compat|anchor]
+```
 
 The **list** sub-command will list all the certificates and their type.
 

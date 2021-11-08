@@ -33,13 +33,13 @@ Admit it - you just got to take a breath and have no idea what to pack or to exp
 
 (Courtesy @cantechit) Video tweets!
 
-> **cantechit**  
-> Final work day prep before @CiscoLive I don’t even have time to blog so here’s my vlog on last minute prep #clus [https://t.co/LtlHZ2XFpK](https://t.co/LtlHZ2XFpK)  
-> [7/8/16, 13:12](https://twitter.com/cantechit/status/751464056687464449)
+**cantechit**  
+Final work day prep before @CiscoLive I don’t even have time to blog so here’s my vlog on last minute prep #clus [https://t.co/LtlHZ2XFpK](https://t.co/LtlHZ2XFpK) 
+[7/8/16, 13:12](https://twitter.com/cantechit/status/751464056687464449)
 
-> **cantechit**  
-> Ok shopping done prepping for @CiscoLive #clus - off to dinner.. #20000 [https://t.co/f72UonDs3w](https://t.co/f72UonDs3w)  
-> [7/8/16, 18:01](https://twitter.com/cantechit/status/751536674564366336)
+**cantechit**  
+Ok shopping done prepping for @CiscoLive #clus - off to dinner.. #20000 [https://t.co/f72UonDs3w](https://t.co/f72UonDs3w)  
+[7/8/16, 18:01](https://twitter.com/cantechit/status/751536674564366336)
 
 [More tips from other #CiscoChampions - S3|Episode18: Cisco Live Tips & Tricks](https://twitter.com/broadcaststorm/status/751832813918302209) [bit.ly/29hzGKf](http://bit.ly/29hzGKf)
 

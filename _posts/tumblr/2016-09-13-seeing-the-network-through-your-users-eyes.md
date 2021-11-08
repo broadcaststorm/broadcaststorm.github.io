@@ -55,19 +55,19 @@ Below are some screenshots of the type of data (wired) that the Beez will monito
 
 First up, some historical ping data from my Beez to the Tech Field Day website, during a period where some substantial changes in ping RTT occurred:
 
-<figure data-orig-width="1970" data-orig-height="704" class="tmblr-full"><img src="https://64.media.tumblr.com/39b7d833d0ca89c1ff246dfb0b673f6f/tumblr_inline_odfaygPb8W1re93or_540.png" alt="image" data-orig-width="1970" data-orig-height="704"></figure>
+<figure data-orig-width="1970" data-orig-height="704" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_odfaygPb8W1re93or_540.png" alt="image" data-orig-width="1970" data-orig-height="704"></figure>
 
 As you can make out in the plots, this is pretty late at night and I certainly wasn’t doing anything on the network. &nbsp;So, let’s take a look at the traceroute data, focusing around the 01:50 time frame. &nbsp;First, the&nbsp;“before” scenario:
 
-<figure data-orig-width="1958" data-orig-height="746" class="tmblr-full"><img src="https://64.media.tumblr.com/0d93d33fb3ea2ba96bd156187c216a94/tumblr_inline_odfb5iF8Bk1re93or_540.png" alt="image" data-orig-width="1958" data-orig-height="746"></figure>
+<figure data-orig-width="1958" data-orig-height="746" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_odfb5iF8Bk1re93or_540.png" alt="image" data-orig-width="1958" data-orig-height="746"></figure>
 
 Now, the “after” scenario:
 
-<figure data-orig-width="1970" data-orig-height="772" class="tmblr-full"><img src="https://64.media.tumblr.com/5510920ae3a238ff3b403219838300cd/tumblr_inline_odfb7pG5xO1re93or_540.png" alt="image" data-orig-width="1970" data-orig-height="772"></figure>
+<figure data-orig-width="1970" data-orig-height="772" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_odfb7pG5xO1re93or_540.png" alt="image" data-orig-width="1970" data-orig-height="772"></figure>
 
 You can see not only did I add 3 hops to my route but that I went from a single hop with 35ms RTT to multiple hops with 35ms RTT or greater. &nbsp;And, at 03:44, you can see another significant routing change occur:
 
-<figure data-orig-width="1962" data-orig-height="878" class="tmblr-full"><img src="https://64.media.tumblr.com/de4b9de77e8d8ed4d89354c28aa16dbc/tumblr_inline_odgrcfdqYP1re93or_540.png" alt="image" data-orig-width="1962" data-orig-height="878"></figure>
+<figure data-orig-width="1962" data-orig-height="878" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_odgrcfdqYP1re93or_540.png" alt="image" data-orig-width="1962" data-orig-height="878"></figure>
 
 What’s clear from these plots is that I was having some performance degradation and some routing changes were taking place in the path **to the specified target** &nbsp;(namely, techfieldday.com). &nbsp;What this data doesn’t show, though, is the return path traceroute - not unexpectedly, though, given the architecture. &nbsp;It is a crucial component in the monitoring picture. &nbsp;
 
@@ -77,7 +77,7 @@ Fortunately, better **path analysis** &nbsp;is a feature on their near term road
 
 Just for kicks, here are&nbsp;the historical data from the speedtest monitoring the Beez was conducting:&nbsp;
 
-<figure data-orig-width="1714" data-orig-height="948" class="tmblr-full"><img src="https://64.media.tumblr.com/79e5d1a556b61045a8b7b5eec0d8ec54/tumblr_inline_odgwwnCvKI1re93or_540.png" alt="image" data-orig-width="1714" data-orig-height="948"></figure>
+<figure data-orig-width="1714" data-orig-height="948" class="tmblr-full"><img src="/images/tumblr/tumblr_inline_odgwwnCvKI1re93or_540.png" alt="image" data-orig-width="1714" data-orig-height="948"></figure>
 ## Sweet Nectar or Angry Swarm?
 
 As much as I love the Raspberry Pi angle and the Linux/IoT angle to the product, the test suite is what could be termed the core, basic tests for a remote network agent. &nbsp;As such,&nbsp;I think there are a couple of checks that are really lacking - especially for small to medium businesses (which I think is a natural play for the product):
@@ -113,7 +113,7 @@ They’ve got some work ahead of them but, by using Linux at the core, they’ll
 
 ## Supplemental Disclaimer
 
-As a refresher, be sure to review [my full blog disclaimer](http://bit.ly/2c7WIJS).
+As a refresher, be sure to review [my full blog disclaimer](/disclaimer-for-my-blog/).
 
 Panos and Stefano over at NetBeez provided the NFD12 delegates with a free, hosted service account as well as one of the Raspberry Pi based Beez (for 100Mbps monitoring). &nbsp;
 
