@@ -23,3 +23,17 @@ tags:
 - IP Prefix Advertisement in Ethernet VPN [RFC 9136](https://datatracker.ietf.org/doc/html/rfc9136)
 - Internet Exchange BGP Route Server [RFC 7947](https://datatracker.ietf.org/doc/html/rfc7947)
 - Multi-site EVPN based VXLAN using Border Gateways [draft-sharma-multi-site-evpn](https://datatracker.ietf.org/doc/html/draft-sharma-multi-site-evpn)
+
+# Automation/Programmability
+
+## RedHat Ansible
+
+- [Ansible Collections Workshop](https://goetzrieger.github.io/ansible-collections/) (AnsibleFest 2020)
+- [Training course for Red Hat Automation Platform](https://github.com/ansible/workshops)
+
+# Blogging/Publishing
+
+## Workshop Style Themes
+- https://learn.netlify.com/en/
+- https://github.com/matcornic/hugo-theme-learn
+- https://github.com/goetzrieger/ansible-labs-summit2020
