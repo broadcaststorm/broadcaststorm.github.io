@@ -101,5 +101,5 @@ In my HPC past, I have used IBM GPFS (now call Spectrum Scale) to perform simila
 
 ## Disclaimer
 
-Please see [my general disclaimer](https://broadcaststorm.tumblr.com/2020/10/19/2016-09-11-disclaimer-for-my-blog.html) on all content I write on this blog. &nbsp;I saw the DriveScale presentations in person, as a delegate for Tech Field Day 12.
+Please see [my general disclaimer](/disclaimer-for-my-blog/) on all content I write on this blog. &nbsp;I saw the DriveScale presentations in person, as a delegate for Tech Field Day 12.
 

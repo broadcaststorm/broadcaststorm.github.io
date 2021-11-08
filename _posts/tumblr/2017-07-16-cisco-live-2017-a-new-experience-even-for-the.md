@@ -70,7 +70,7 @@ While I think there are real growing challenges the conference is experiencing, 
 
 ## Disclosure
 
-These thoughts, observations, and opinions are mine and mine alone. &nbsp;No one asked me to write them or publish them. &nbsp;As I said, I am passionate about Cisco Live and love personally writing about it to help people enjoy it more fully. &nbsp;If you have trouble believing that, feel free to check out [my previous blog posts about Cisco Live.](https://broadcaststorm.tumblr.com/tagged/clus)
+These thoughts, observations, and opinions are mine and mine alone. &nbsp;No one asked me to write them or publish them. &nbsp;As I said, I am passionate about Cisco Live and love personally writing about it to help people enjoy it more fully. &nbsp;If you have trouble believing that, feel free to check out [my previous blog posts about Cisco Live.](/tags/#clus)
 
 That being said, I am now a Cisco employee (Virtual Systems Engineer, Data Center) and am completely unaffiliated with the conference planning and execution. These are my words and not the words of Cisco.
 

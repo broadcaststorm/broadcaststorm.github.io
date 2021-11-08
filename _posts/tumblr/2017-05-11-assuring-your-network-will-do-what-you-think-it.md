@@ -96,5 +96,5 @@ So I’ll finish with a strong recommendation that you check out each and every 
 
 The price of being too busy means sometimes keys, lists, sticky notes, and blog posts get lost. I was cleaning up my folders today and ran across my completed blog post on Forward Networks I wrote back in December 2016. &nbsp;So, please forgive any dated references are tenses that seem like I just saw these guys. I saw them back in November 2016.
 
-Also reference [my general disclaimer](https://broadcaststorm.tumblr.com/2020/10/19/2016-09-11-disclaimer-for-my-blog.html) regarding my attendance - in short, no one asked me to write this, let alone what to say. GestaltIT/TechFieldDay provided travel accommodations to attend the event.
+Also reference [my general disclaimer](/disclaimer-for-my-blog/) regarding my attendance - in short, no one asked me to write this, let alone what to say. GestaltIT/TechFieldDay provided travel accommodations to attend the event.
 
