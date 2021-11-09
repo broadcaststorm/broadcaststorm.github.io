@@ -29,4 +29,4 @@ tags:
 **Abstract**: A look into the power of APIs and how they can be leveraged to simplify the deployment and management of an ACI fabric leveraging a Network Centric model.  The projects aim was to leverage best practices and reduce the number of decisions needed for building ACI networks.
 - Project was 2nd-place award winner in an internal Cisco America's SE Innovation Challenge contest running during summer of 2020.
 - [Recording](https://youtu.be/-aGZfT8BH8M)
-= [GitHub Repo](https://github.com/CiscoSE/project-brahma)
+- [GitHub Repo](https://github.com/CiscoSE/project-brahma)
