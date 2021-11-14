@@ -15,6 +15,44 @@ tags:
 - [Catalog Entry](https://www.ciscolive.com/on-demand/on-demand-library.html?#/session/1610747197869001O2Fp)
 - [GitHub Repo](https://github.com/CiscoSE/BRKDEV-2004-CL21)
 
+### Demystifying Applicaton Modeling and Workload Management in CloudCenter Suite” - Cisco Live 2020 Digital: DGTL-BRKCLD-2002 (90-min Technical Breakout)
+
+**Abstract** Application profiles are the core technology in Cisco CloudCenter Suite's Workload Manager that enables you to model your application once and deploy it anywhere. In this session, attendees will learn the anatomy of these profiles and how to best leverage them to meet your strategic goals. The session will explore the various stages of a deployment and how those stages - with their settings – map to resource consumption in cloud environments. Integrations and contrasts with various open source tools will be discussed. The session will also cover common operational tasks with application deployments, demonstrating the full lifecycle management of an application using CloudCenter Suite Workload Manager.
+
+- [Catalog Entry](https://www.ciscolive.com/on-demand/on-demand-library.html?#/session/15729077784410015k9R)
+- [GitHub Repo](https://github.com/gve-vse-tim/BRKCLD-2002-CLUS20)
+
+### DevNet Workshop: Leveraging NX-APIs for Customized Operational Analytics” - Cisco Live 2020 Barcelona: DEVWKS-2594 (45-min workshop)
+
+**Abstract** Monitoring tools can't quite give you the operational views you are looking for? One of the untapped potentials of APIs is the ability to gather specific metrics from your networking infrastructure to build customized dashboards for operations. In this session, participants will be presented an overview of interesting metrics that can be collected from NX-API, how to leverage Python to access the API to collect the data, and populate that data in modern visualization platforms (Prometheus and Grafana).
+
+- [Catalog Entry](https://www.ciscolive.com/on-demand/on-demand-library.html?#/session/1564527383510001cXOU)
+- [GitHub Repo](https://github.com/CiscoSE/DEVWKS-2594-CLEUR20)
+
+### A Look at Microsegmentation in VXLAN EVPN” - Cisco Live 2020 Barcelona: DEVLIT-4001 (20-min lightning talk)
+
+**Abstract** Microsegmentation is a key design strategy in securing the data center. Cisco's primary microsegmentation solutions are ACI at the network layer and Tetration at the operating system layer. However, customers are choosing to deploy Nexus 9000 switches in the data center using the VXLAN EVPN based fabric technology. Can we realize equivalent levels of microsegmentation in VXLAN EVPN fabrics that we see with ACI? This lightning talk will dive right into the different flavors of microsegmentation, demonstrating switch configurations and automation on what microsegmentation can be realized in VXLAN EVPN fabrics.
+
+- [Catalog Entry](https://www.ciscolive.com/on-demand/on-demand-library.html?#/session/1573793639418001jr4M)
+- [GitHub Repo](https://github.com/CiscoSE/DEVLIT-4001-CLEUR20)
+
+
+### DevNet Workshop: Leveraging NX-APIs for Customized Operational Analytics” - Cisco Live 2019 San Diego: DEVWKS-2594 (45-min workshop)
+
+**Abstract** Monitoring tools can't quite give you the operational views you are looking for? One of the untapped potentials of APIs is the ability to gather specific metrics from your networking infrastructure to build customized dashboards for operations. In this session, participants will be presented an overview of interesting metrics that can be collected from NX-API, how to leverage Python to access the API to collect the data, and populate that data in modern visualization platforms (Prometheus and Grafana).
+
+- Catalog Entry *expired*
+- [GitHub Repo](https://github.com/CiscoSE/DEVWKS-2594-CLUS19)
+- [Presentation Slides](/artifacts/presentations/clus19-devnet2594-nxapi.pdf)
+
+### DevNet Workshop: Leveraging NX-APIs for Customized Operational Analytics” - Cisco Live 2018 Orlando: DEVWKS-2594 (45-min workshop)
+
+**Abstract** Monitoring tools can't quite give you the operational views you are looking for? One of the untapped potentials of APIs is the ability to gather specific metrics from your networking infrastructure to build customized dashboards for operations. In this session, participants will be presented an overview of interesting metrics that can be collected from NX-API, how to leverage Python to access the API to collect the data, and populate that data in modern visualization platforms (Prometheus and Grafana).
+
+- Catalog Entry *expired*
+- [GitHub Repo](https://github.com/CiscoSE/DEVWKS-2594-CLUS18)
+- [Presentation Slides](/artifacts/presentations/clus18-devnet2594-nxapi.pdf)
+
 ## DevNet Create
 
 ### "A Journey to Cuddle with an API" - DevNet Create 2021: Creators Track (20-min technical session)
