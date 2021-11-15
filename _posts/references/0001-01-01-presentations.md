@@ -36,6 +36,13 @@ tags:
 - [Catalog Entry](https://www.ciscolive.com/on-demand/on-demand-library.html?#/session/1573793639418001jr4M)
 - [GitHub Repo](https://github.com/CiscoSE/DEVLIT-4001-CLEUR20)
 
+### DevNet Workshop: Safely using your Nexus 9000 switches as a Kubernetes cluster - Cisco Live 2019 San Diego: DEVWKS-2096 (45-min workshop)
+
+**Abstract** Do you have containerized sensors or applications at the edge and no place to run them?  Need a container management and orchestration strategy to boot?  With the 9.2 release, NX-OS running on your Nexus 9000 switches now comes with Docker 1.13.1.  With the promise of a standardized container runtime comes the challenge of application deployment and management - including upgrade of applications. In this session, you will enable the Docker container engine on your Nexus 9000 switches and install the kubelet to join the Kubernetes cluster.  Once operational, attendees will deploy an application to targeted switches and upgrade those applications.  The code for these tasks and their automation will be provided to attendees.
+
+- Catalog Entry *expired*
+- [GitHub Repo](https://github.com/CiscoSE/DEVWKS-2096-CLUS19)
+- [Presentation Slides](/artifacts/presentations/clus19-devnet2096-kubernetes.pdf)
 
 ### DevNet Workshop: Leveraging NX-APIs for Customized Operational Analytics” - Cisco Live 2019 San Diego: DEVWKS-2594 (45-min workshop)
 
@@ -52,6 +59,18 @@ tags:
 - Catalog Entry *expired*
 - [GitHub Repo](https://github.com/CiscoSE/DEVWKS-2594-CLUS18)
 - [Presentation Slides](/artifacts/presentations/clus18-devnet2594-nxapi.pdf)
+
+### Cisco UCS as an Advanced Computing Platform for the Enterprise - Cisco Live 2018 Orlando: TECINI-2543 (4 hour Techinical Seminar)
+
+**Abstract** The explosion of data and bandwidth in the Internet age requires significant amounts of computation and storage to gain insights and intelligence to drive innovation. Parallel computing using clustered x86 system is one technique for advanced research problems. Now these problems are pushing computation and machine learning to new frontiers with supplemental accelerator technology such as GPUs.
+
+The session will cover x86 clustering and storage technology (i.e. Big Data, RoCE and Infiniband, Message Passing Interface (MPI), etc) using the Cisco UCS C240 M5 and S3260 systems.  Participants will learn about GPU-based computing and machine learning as applied to advanced research problems. 
+	
+This session will include demonstrations of the technologies. The hands-on labs will include building a HPC cluster on a personal laptop using Bright Computing Cluster Manager and will include Machine Learning exercises. Experts from Bright Computing and Nvidia will co-lead the session.
+
+- Catalog Entry *expired*
+- [GitHub Repo](https://github.com/CiscoSE/TECINI-2543-CLUS18)
+- [Presentation Slides](/artifacts/presentations/clus18-tecini2543-ucshpc.pdf)
 
 ## DevNet Create
 
