@@ -3,6 +3,7 @@ layout: reference
 title:  "Interesting Collection of Information"
 tags:
 - bookmarks
+- references
 ---
 
 # Kubernetes
@@ -27,6 +28,11 @@ tags:
 - BGP Encodings and Procedures for Multicast in MPLS/BGP IP VPNs [RFC 6514](https://datatracker.ietf.org/doc/html/rfc6514)
 - Seamless Multicast Interoperability between EVPN and MVPN PEs [draft-sajassi-bess-evpn-mvpn-seamless-interop-04](https://datatracker.ietf.org/doc/html/draft-sajassi-bess-evpn-mvpn-seamless-interop)
 - NVO3 Fault Management [draft-tissa-nvo3-oam-fm](https://datatracker.ietf.org/doc/html/draft-tissa-nvo3-oam-fm)
+
+### NX-OS
+
+- [VXLAN/EVPN Forwarding Characteristics](https://www.ciscopress.com/articles/article.asp?p=2803865)
+- ["A Modern, Open and Scalable Fabric: VXLAN EVPN"](https://www.booksprints.net/book/cisco-vxlan-evpn-book-sprint/)
 
 # Automation/Programmability
 
