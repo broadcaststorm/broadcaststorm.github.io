@@ -8,6 +8,12 @@ tags:
 
 # Kubernetes
 
+## Cloud Native Community
+
+- [Kubernetes Networking Demystifed: a brief guide](https://www.cncf.io/blog/2020/01/30/kubernetes-networking-demystified-a-brief-guide/), [Original posting at StackRox](https://www.stackrox.io/blog/kubernetes-networking-demystified/)
+
+- [Provision Bare Metal Kubernetes with the Cluster API](https://thenewstack.io/provision-bare-metal-kubernetes-with-the-cluster-api/) using [MaaS](https://maas.io)
+
 ## Cisco
 - [A Comprehensive Guide to Kubernetes Networking with the Intersight Kubernetes Service White paper](https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/comp-guide-kubernetes-networking-wp.html) ([PDF 2021-11-08](/artifacts/downloads/comp-guide-kubernetes-networking-wp.pdf))
 
