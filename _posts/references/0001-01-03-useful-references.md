@@ -66,6 +66,12 @@ tags:
 - [Ansible Collections Workshop](https://goetzrieger.github.io/ansible-collections/) (AnsibleFest 2020)
 - [Training course for Red Hat Automation Platform](https://github.com/ansible/workshops)
 
+## pyATS
+
+- [pyATS Docs](https://developer.cisco.com/docs/pyats/)
+- [pyATS API](https://developer.cisco.com/docs/pyats/api/)
+- [Jerome Tissieres Intro Article](https://aboutnetworks.net/pyats-1/)
+
 # Blogging/Publishing
 
 ## Workshop Style Themes
