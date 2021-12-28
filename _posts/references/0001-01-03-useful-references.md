@@ -14,6 +14,8 @@ tags:
 
 - [Provision Bare Metal Kubernetes with the Cluster API](https://thenewstack.io/provision-bare-metal-kubernetes-with-the-cluster-api/) using [MaaS](https://maas.io)
 
+- [Cloud Native Storage with OpenEBS - Admin Magazine](https://www.admin-magazine.com/Archive/2021/62/Cloud-native-storage-with-OpenEBS)
+
 ## Cisco
 - [A Comprehensive Guide to Kubernetes Networking with the Intersight Kubernetes Service White paper](https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/comp-guide-kubernetes-networking-wp.html) ([PDF 2021-11-08](/artifacts/downloads/comp-guide-kubernetes-networking-wp.pdf))
 
