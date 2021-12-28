@@ -19,6 +19,12 @@ tags:
 ## Cisco
 - [A Comprehensive Guide to Kubernetes Networking with the Intersight Kubernetes Service White paper](https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/comp-guide-kubernetes-networking-wp.html) ([PDF 2021-11-08](/artifacts/downloads/comp-guide-kubernetes-networking-wp.pdf))
 
+# Applications, DevOps, and more
+
+## GitHub
+
+- [Sample GitHub Actions](https://github.com/actions/starter-workflows)
+
 # Networking
 
 ## VXLAN EVPN
