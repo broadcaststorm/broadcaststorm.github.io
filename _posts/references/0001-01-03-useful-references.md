@@ -21,6 +21,17 @@ tags:
 
 # Applications, DevOps, and more
 
+## Development
+
+- [The 12-factor Application](https://12factor.net)
+- [OpenAPI Spec](https://github.com/OAI/OpenAPI-Specification)
+- Swagger
+  - [OpenAPI Guide](https://swagger.io/docs/specification/about/)
+  - [Swagger Hub](https://support.smartbear.com/swaggerhub/docs/index.html)
+  - [Swagger Editor](https://editor.swagger.io)
+  - [Swagger UI](https://swagger.io/tools/swagger-ui/)
+  - [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)
+
 ## GitHub
 
 - [Sample GitHub Actions](https://github.com/actions/starter-workflows)
