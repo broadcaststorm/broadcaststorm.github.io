@@ -31,6 +31,8 @@ tags:
   - [Swagger Editor](https://editor.swagger.io)
   - [Swagger UI](https://swagger.io/tools/swagger-ui/)
   - [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)
+- Redocly
+  - [OpenAPI repo on GitHub](https://github.com/Redocly/create-openapi-repo)
 
 ## GitHub
 
