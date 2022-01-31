@@ -8,6 +8,19 @@ tags:
 
 # Kubernetes
 
+## Service Mesh
+
+### eBPF
+
+- [Cilium Open Source Project](https://cilium.io)
+- [How eBPF will solve Service Mesh - Goodbye Sidecars (Isovalent)](https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh)
+- [How eBPF Streamlines the Service Mesh (Isovalent via The New Stack)[https://thenewstack.io/how-ebpf-streamlines-the-service-mesh/]
+- [Super Charge Your Service Mesh with eBPF (Solo.io via ServiceMeshCon NA 2021)](https://youtu.be/VV3MzbPXyTM)
+
+- [Calico eBPF via Tigera](https://www.tigera.io/blog/introducing-the-calico-ebpf-dataplane/) - with lots of contrasting performance data.
+- [GKE Dataplane v2](https://cloud.google.com/kubernetes-engine/docs/concepts/dataplane-v2)
+- [AWS: Turbocharging EKS networking with Bottlerocket, Calico, and eBPF](https://aws.amazon.com/blogs/containers/turbocharging-eks-networking-with-bottlerocket-calico-and-ebpf/)
+
 ## Cloud Native Community
 
 - [Kubernetes Networking Demystifed: a brief guide](https://www.cncf.io/blog/2020/01/30/kubernetes-networking-demystified-a-brief-guide/), [Original posting at StackRox](https://www.stackrox.io/blog/kubernetes-networking-demystified/)
