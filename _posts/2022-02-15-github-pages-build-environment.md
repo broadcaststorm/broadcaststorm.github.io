@@ -17,9 +17,10 @@ This article isn't about
 but you need to know just a little bit about it. In short, you can use
 GitHub provided themes (which are Jekyll based) or your own custom Jekyll
 theme.  There are of course a wide selection of freely available themes
-out there that some very kind people have made available^[As a side note,
-you can host static content built from other generators, you just have
-to have your own workflow to generate them.]
+out there that some very kind people have made available. 
+
+As a side note, you can host static content built from other generators,
+you just have to have your own workflow to generate them. Anyway...
 
 The important concept to keep in mind here is that these sites
 usually are static content - meaning that the Jekyll engine processes
@@ -39,6 +40,9 @@ any number of details could cause issues with your site, such as:
 - Jekyll errors that fail to build your static content.
 - Difficulty in troubleshooting those issues (where in the world is
 the "error reporting" with GitHub pages?!?!)
+    - Update: And no sooner did I post this, it seems the builds are
+(now) exposed as GitHub Actions. It's been a while since I last looked
+so don't know if this was always the case but fortunately it is now.
 - Turnaround times for tuning the layouts (typically via CSS) are
 not really feasible.
 
