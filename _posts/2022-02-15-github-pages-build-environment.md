@@ -17,10 +17,10 @@ This article isn't about
 but you need to know just a little bit about it. In short, you can use
 GitHub provided themes (which are Jekyll based) or your own custom Jekyll
 theme.  There are of course a wide selection of freely available themes
-out there that some very kind people have made available. 
-
-As a side note, you can host static content built from other generators,
-you just have to have your own workflow to generate them. Anyway...
+out there that some very kind people have made available. And, if that
+doesn't work for you, you can host static content built from other
+generators, you just have to have your own workflow to generate them.
+Anyway...
 
 The important concept to keep in mind here is that these sites
 usually are static content - meaning that the Jekyll engine processes
