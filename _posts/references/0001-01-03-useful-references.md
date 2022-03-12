@@ -41,6 +41,17 @@ tags:
 ## Cisco
 - [A Comprehensive Guide to Kubernetes Networking with the Intersight Kubernetes Service White paper](https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/comp-guide-kubernetes-networking-wp.html) ([PDF 2021-11-08](/artifacts/downloads/comp-guide-kubernetes-networking-wp.pdf))
 
+## Hashicorp
+
+- [Let's Encrypt Hashicorp Nomad and Consul](https://github.com/letsencrypt/hashicorp-lessons)
+
+## Solo
+
+- [Blocking Log4j with Gloo Mesh](https://www.solo.io/blog/blocking-the-log4shell-vulnerability-with-gloo-mesh/)
+- [Christian Posta Blogs](https://blog.christianposta.com)
+    - [Do I need an API Gateway if I have a service mesh](https://blog.christianposta.com/microservices/do-i-need-an-api-gateway-if-i-have-a-service-mesh/)
+
+
 # Applications, DevOps, and more
 
 ## Development
@@ -55,6 +66,8 @@ tags:
   - [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)
 - Redocly
   - [OpenAPI repo on GitHub](https://github.com/Redocly/create-openapi-repo)
+- [JSON Placeholder](https://jsonplaceholder.typicode.com)
+- [Nicholas Jackson's Fake Service](https://github.com/nicholasjackson/fake-service)
 
 ## GitHub
 
@@ -65,6 +78,12 @@ tags:
 - [Vagrant](https://www.vagrantup.com)
     - [Open Source ESXi Vagrant Provider](https://github.com/nsidc/vagrant-vsphere/)
 - [Ruby 2.7.3 GitHub Pages build environment](https://github.com/broadcaststorm/blog-local-build)
+
+# Linux
+
+## Performance/Monitoring
+
+- [Brendan Gregg](https://www.brendangregg.com/)
 
 # Networking
 
