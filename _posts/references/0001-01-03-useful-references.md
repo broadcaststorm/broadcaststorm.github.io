@@ -16,8 +16,11 @@ tags:
 - [How eBPF will solve Service Mesh - Goodbye Sidecars (Isovalent)](https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh)
 - [How eBPF Streamlines the Service Mesh (Isovalent via The New Stack)](https://thenewstack.io/how-ebpf-streamlines-the-service-mesh/)
 - [Super Charge Your Service Mesh with eBPF (Solo.io via ServiceMeshCon NA 2021)](https://youtu.be/VV3MzbPXyTM)
+- [eBPF for Service Mesh? Yes, but Envoy Proxy is here to stay](https://www.solo.io/blog/ebpf-for-service-mesh/)
+- [Merbridge - Accelerate your Mesh with eBPF (Istio Blog)](https://istio.io/latest/blog/2022/merbridge/)
 
 - [Calico eBPF via Tigera](https://www.tigera.io/blog/introducing-the-calico-ebpf-dataplane/) - with lots of contrasting performance data.
+
 - [GKE Dataplane v2](https://cloud.google.com/kubernetes-engine/docs/concepts/dataplane-v2)
 - [AWS: Turbocharging EKS networking with Bottlerocket, Calico, and eBPF](https://aws.amazon.com/blogs/containers/turbocharging-eks-networking-with-bottlerocket-calico-and-ebpf/)
 
