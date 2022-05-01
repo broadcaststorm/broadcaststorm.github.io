@@ -82,6 +82,10 @@ tags:
     - [Open Source ESXi Vagrant Provider](https://github.com/nsidc/vagrant-vsphere/)
 - [Ruby 2.7.3 GitHub Pages build environment](https://github.com/broadcaststorm/blog-local-build)
 
+## Data Analysis
+
+- [Emerging Architectures in Modern Data Infrastructure](https://future.a16z.com/emerging-architectures-modern-data-infrastructure/)
+
 # Linux
 
 ## Performance/Monitoring
