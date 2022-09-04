@@ -24,6 +24,14 @@ tags:
 - [GKE Dataplane v2](https://cloud.google.com/kubernetes-engine/docs/concepts/dataplane-v2)
 - [AWS: Turbocharging EKS networking with Bottlerocket, Calico, and eBPF](https://aws.amazon.com/blogs/containers/turbocharging-eks-networking-with-bottlerocket-calico-and-ebpf/)
 
+## Deployment
+
+- [Helm](https://helm.sh)
+- [Kustomize](https://kustomize.io): Kubernetes native configuration management. A way to overlay configurations rather than using templates.  Base configuration for all environments, then use a dev or test or prod YAML for those specific environments.  Integrated into kubectl with '-k' option.
+  - [Introduction to Kustomize](https://speakerdeck.com/spesnova/introduction-to-kustomize): A talk from Kubernetes Meetup Tokyo #12
+- [ArgoCD](https://argoproj.github.io/cd/), [Docs](https://argo-cd.readthedocs.io/en/stable/)
+  - [Structuring Your Repo for ArgoCD, part 1](https://medium.com/@versentfastforward/structuring-your-repo-for-argocd-part-1-582817713b0): Leveraging Helm, Kustomize, GitOps with ArgoCD to deduplicate a vast number of the configuration files for the various stages.  
+
 ## Cloud Native Community
 
 **Networking**
