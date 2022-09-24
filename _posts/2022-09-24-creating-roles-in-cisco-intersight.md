@@ -137,4 +137,4 @@ In the next blog, we'll build on this foundational information and demonstrate h
 
 ## Employment Disclaimer
 
-[^1] This blog post is my own words, written on my own time, and for my own self-interest/gratification. Nothing in this post has been approved by or in any way represents official statements from my employer. The entire content could be completely wrong and you should test its veracity with the referenced materials in a development environment. The usual "no warranties implied, explicity or implicity" warnings apply. You should also refer to my [Conflict of Interest](/conflict-of-interests/) disclaimer post as well.
+[^1]: This blog post is my own words, written on my own time, and for my own self-interest/gratification. Nothing in this post has been approved by or in any way represents official statements from my employer. The entire content could be completely wrong and you should test its veracity with the referenced materials in a development environment. The usual "no warranties implied, explicity or implicity" warnings apply. You should also refer to my [Conflict of Interest](/conflict-of-interests/) disclaimer post as well.
