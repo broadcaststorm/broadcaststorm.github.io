@@ -31,7 +31,7 @@ Different portions of this process could be accomplished separately by different
 
 - Define the group, add Devices (Targets)
 
-![Create Resource Groups](/images/intersight-rbac/rbac-gui-settings-create-resource.png)
+![Create Resource Groups](/images/intersight-rbac/rbac-gui-settings-create-resource-group.png)
 
 - Navigate to Settings->Organization, click Create Organization
 
